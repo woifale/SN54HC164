@@ -29,18 +29,41 @@ void main(void){
   
   
   while(1){
+    
+    for(int i=1; i< 16; i++){
+      //shift a bit into the register
+      SN54HC164_bit(&SHIFT_REG_DATA_PORT, SHIFT_REG_DATA_PIN, SHIFT_REG_CLK_PIN, true);
 
-    //shift a bit into the register
-    SN54HC164_bit(&SHIFT_REG_DATA_PORT, SHIFT_REG_DATA_PIN, SHIFT_REG_CLK_PIN, true);
+      // warten
+      _delay_ms(500);
 
-    // warten
+      //shift a zero into the register
+      SN54HC164_bit(&SHIFT_REG_DATA_PORT, SHIFT_REG_DATA_PIN, SHIFT_REG_CLK_PIN, false);
+
+      //warten
+      _delay_ms(500);
+    }
+   
+    SN54HC164_erase(&SHIFT_REG_DATA_PORT, SHIFT_REG_CLR_PIN);
+
+    SN54HC164_byte(&SHIFT_REG_DATA_PORT, SHIFT_REG_DATA_PIN, SHIFT_REG_CLK_PIN, 0b00000001);
     _delay_ms(500);
-
-    //shift a zero into the register
-    SN54HC164_bit(&SHIFT_REG_DATA_PORT, SHIFT_REG_DATA_PIN, SHIFT_REG_CLK_PIN, false);
-
-    //warten
+    SN54HC164_byte(&SHIFT_REG_DATA_PORT, SHIFT_REG_DATA_PIN, SHIFT_REG_CLK_PIN, 0b00000010);
     _delay_ms(500);
+    SN54HC164_byte(&SHIFT_REG_DATA_PORT, SHIFT_REG_DATA_PIN, SHIFT_REG_CLK_PIN, 0b00000100);
+    _delay_ms(500);
+    SN54HC164_byte(&SHIFT_REG_DATA_PORT, SHIFT_REG_DATA_PIN, SHIFT_REG_CLK_PIN, 0b00001000);
+    _delay_ms(500);
+    SN54HC164_byte(&SHIFT_REG_DATA_PORT, SHIFT_REG_DATA_PIN, SHIFT_REG_CLK_PIN, 0b00010000);
+    _delay_ms(500);
+    SN54HC164_byte(&SHIFT_REG_DATA_PORT, SHIFT_REG_DATA_PIN, SHIFT_REG_CLK_PIN, 0b00100000);
+    _delay_ms(500);
+    SN54HC164_byte(&SHIFT_REG_DATA_PORT, SHIFT_REG_DATA_PIN, SHIFT_REG_CLK_PIN, 0b01000000);
+    _delay_ms(500);
+    SN54HC164_byte(&SHIFT_REG_DATA_PORT, SHIFT_REG_DATA_PIN, SHIFT_REG_CLK_PIN, 0b10000000);
+    _delay_ms(500);
+		 
+		   
     
   }
 

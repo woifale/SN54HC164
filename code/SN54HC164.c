@@ -63,5 +63,15 @@ void SN54HC164_bit(uint8_t *data_port, uint8_t data_pin, uint8_t clock_pin, bool
 
 /* Shift in Byte */
 void SN54HC164_byte(uint8_t *data_port, uint8_t data_pin, uint8_t clk_pin, uint8_t databyte){
-
+  uint8_t  i;
+  
+  for (i=0;i<8;i++){
+    if (bit_is_set(databyte, i)){
+      SN54HC164_bit(data_port, data_pin, clk_pin, true);
+    }
+    else {
+      SN54HC164_bit(data_port, data_pin, clk_pin, false);
+    }
+  }
+  
 }
