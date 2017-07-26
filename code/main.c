@@ -63,7 +63,10 @@ void main(void){
     SN54HC164_byte(&SHIFT_REG_DATA_PORT, SHIFT_REG_DATA_PIN, SHIFT_REG_CLK_PIN, 0b10000000);
     _delay_ms(500);
 		 
-		   
+    for(int i=0;i<255;i++){
+      SN54HC164_byte(&SHIFT_REG_DATA_PORT, SHIFT_REG_DATA_PIN, SHIFT_REG_CLK_PIN, i);
+      _delay_ms(500);
+    }
     
   }
 
