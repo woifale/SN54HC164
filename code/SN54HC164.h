@@ -13,6 +13,9 @@ Datasheets can be found here:
 <a href="../datasheets/Atmel-42735-8-bit-AVR-Microcontroller-ATmega328-328P_Datasheet.pdf">ATmega328P</a>
 <br>
 <a href="../datasheets/164445-da-01-en-CMOS_IC_SN74HC164N_DIP14_TID.pdf">SN54HC164</a>
+
+Breadboard:
+<center><img src="../fritzing/SN54HC164_breadboard.png"></center>
 */
 
 
