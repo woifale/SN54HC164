@@ -1,0 +1,7 @@
+# compiled source #
+###################
+*.elf
+*.hex
+*.map
+*.o
+
