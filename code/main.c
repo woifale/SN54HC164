@@ -1,18 +1,44 @@
 /*********************************************************/
-/** main.c                                              **/
+/* main.c                                                */
 /*********************************************************/
 
+/**
+  @file main.c
+  @author Woifale
+  @date 26 July 2017
+  @brief Usage demonstration of Shift Register SN54HC164 (SN54HC164.h)
+
+  This file shows how functions of SN54HC164.h can be used. It's based on microcontroller ATmega328PU.
+
+ */
 
 #include <avr/io.h>
 #include "SN54HC164.h"
 
+/** Defines are based on ATmega328P */
+
+/** Defines Pin number for Data line*/
 #define SHIFT_REG_DATA_PIN     PD2
+
+/** Defines pin number for Clear pin*/
 #define SHIFT_REG_CLR_PIN      PD3
+
+/** Defines pin number for Clock pin*/
 #define SHIFT_REG_CLK_PIN      PD4
+
+/** Defines data port used in this sample */
 #define SHIFT_REG_DATA_PORT    PORTD
+
+/** Defines data direction register according to data port */
 #define SHIFT_REG_DATA_DIR_REG DDRD
+
+/** Defines data direction for data line */
 #define SHIFT_REG_DIR_DAT_PIN  DDD2
+
+/** Defines data direction for clear line*/
 #define SHIFT_REG_DIR_CLR_PIN  DDD3
+
+/** Defines data direction for clock line*/
 #define SHIFT_REG_DIR_CLK_PIN  DDD4
 
 

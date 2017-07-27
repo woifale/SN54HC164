@@ -1,0 +1,235 @@
+\hypertarget{_s_n54_h_c164_8h}{\section{/home/woifal/\+Projekte/avr/\+S\+N54\+H\+C164/code/\+S\+N54\+H\+C164.h File Reference}
+\label{_s_n54_h_c164_8h}\index{/home/woifal/\+Projekte/avr/\+S\+N54\+H\+C164/code/\+S\+N54\+H\+C164.\+h@{/home/woifal/\+Projekte/avr/\+S\+N54\+H\+C164/code/\+S\+N54\+H\+C164.\+h}}
+}
+
+
+Functions for Shift Register S\+N54\+H\+C164.  
+
+
+{\ttfamily \#include $<$avr/io.\+h$>$}\\*
+{\ttfamily \#include $<$stdbool.\+h$>$}\\*
+{\ttfamily \#include $<$util/delay.\+h$>$}\\*
+Include dependency graph for S\+N54\+H\+C164.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=286pt]{_s_n54_h_c164_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_s_n54_h_c164_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_s_n54_h_c164_8h_a22469686577e3f812413a6eefbce7eb5}{S\+N54\+H\+C164\+\_\+\+H}
+\item 
+\#define \hyperlink{_s_n54_h_c164_8h_a35e9e6e2083e3b0868e9d83b2962cf88}{S\+N54\+H\+C164\+\_\+\+C\+M\+D\+\_\+\+W\+A\+I\+T\+\_\+\+C\+L\+K\+\_\+\+T\+I\+M\+E}~25
+\item 
+\#define \hyperlink{_s_n54_h_c164_8h_aa84d3dd4dde38f540cb59f9ec8318674}{S\+N54\+H\+C164\+\_\+\+C\+M\+D\+\_\+\+W\+A\+I\+T\+\_\+\+D\+A\+T\+A\+\_\+\+T\+I\+M\+E}~30
+\item 
+\#define \hyperlink{_s_n54_h_c164_8h_affcc1fc171b3c770e2de25decf2935a5}{S\+N54\+H\+C164\+\_\+\+C\+M\+D\+\_\+\+W\+A\+I\+T\+\_\+\+C\+L\+R\+\_\+\+T\+I\+M\+E}~30
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{_s_n54_h_c164_8h_a3aa48ed905fd1aac09f3ca65286c354c}{S\+N54\+H\+C164\+\_\+erase} (uint8\+\_\+t $\ast$port, uint8\+\_\+t pin)
+\begin{DoxyCompactList}\small\item\em Erase content of shift register. \end{DoxyCompactList}\item 
+void \hyperlink{_s_n54_h_c164_8h_af3227d0693902aaba97515b8f43de590}{S\+N54\+H\+C164\+\_\+clock} (uint8\+\_\+t $\ast$data\+\_\+port, uint8\+\_\+t clock\+\_\+pin)
+\begin{DoxyCompactList}\small\item\em Send clock Pulse to shift register. \end{DoxyCompactList}\item 
+void \hyperlink{_s_n54_h_c164_8h_a4dad589fa4a02f265916f6744c71a970}{S\+N54\+H\+C164\+\_\+bit} (uint8\+\_\+t $\ast$data\+\_\+port, uint8\+\_\+t data\+\_\+pin, uint8\+\_\+t clock\+\_\+pin, bool bit)
+\begin{DoxyCompactList}\small\item\em Shift single bit into shift register. \end{DoxyCompactList}\item 
+void \hyperlink{_s_n54_h_c164_8h_a7aed975455db966f44726caadf705ac9}{S\+N54\+H\+C164\+\_\+byte} (uint8\+\_\+t $\ast$data\+\_\+port, uint8\+\_\+t data\+\_\+pin, uint8\+\_\+t clock\+\_\+pin, uint8\+\_\+t databyte)
+\begin{DoxyCompactList}\small\item\em Shift whole byte into shift register. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Functions for Shift Register S\+N54\+H\+C164. 
+
+\begin{DoxyAuthor}{Author}
+Woifale 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+26 July 2017 This file contains header functions to work with Shift Register S\+N54\+H\+C164. S\+N54\+H\+C164 is a serial 8bit Shift register which immediately writes out data 
+\end{DoxyDate}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{_s_n54_h_c164_8h_a35e9e6e2083e3b0868e9d83b2962cf88}{\index{S\+N54\+H\+C164.\+h@{S\+N54\+H\+C164.\+h}!S\+N54\+H\+C164\+\_\+\+C\+M\+D\+\_\+\+W\+A\+I\+T\+\_\+\+C\+L\+K\+\_\+\+T\+I\+M\+E@{S\+N54\+H\+C164\+\_\+\+C\+M\+D\+\_\+\+W\+A\+I\+T\+\_\+\+C\+L\+K\+\_\+\+T\+I\+M\+E}}
+\index{S\+N54\+H\+C164\+\_\+\+C\+M\+D\+\_\+\+W\+A\+I\+T\+\_\+\+C\+L\+K\+\_\+\+T\+I\+M\+E@{S\+N54\+H\+C164\+\_\+\+C\+M\+D\+\_\+\+W\+A\+I\+T\+\_\+\+C\+L\+K\+\_\+\+T\+I\+M\+E}!S\+N54\+H\+C164.\+h@{S\+N54\+H\+C164.\+h}}
+\subsubsection[{S\+N54\+H\+C164\+\_\+\+C\+M\+D\+\_\+\+W\+A\+I\+T\+\_\+\+C\+L\+K\+\_\+\+T\+I\+M\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+N54\+H\+C164\+\_\+\+C\+M\+D\+\_\+\+W\+A\+I\+T\+\_\+\+C\+L\+K\+\_\+\+T\+I\+M\+E~25}}\label{_s_n54_h_c164_8h_a35e9e6e2083e3b0868e9d83b2962cf88}
+Wait Time in micro seconds. According to specifiction this is the minimal time the I\+C needs to recognize the Clock signal. \hypertarget{_s_n54_h_c164_8h_affcc1fc171b3c770e2de25decf2935a5}{\index{S\+N54\+H\+C164.\+h@{S\+N54\+H\+C164.\+h}!S\+N54\+H\+C164\+\_\+\+C\+M\+D\+\_\+\+W\+A\+I\+T\+\_\+\+C\+L\+R\+\_\+\+T\+I\+M\+E@{S\+N54\+H\+C164\+\_\+\+C\+M\+D\+\_\+\+W\+A\+I\+T\+\_\+\+C\+L\+R\+\_\+\+T\+I\+M\+E}}
+\index{S\+N54\+H\+C164\+\_\+\+C\+M\+D\+\_\+\+W\+A\+I\+T\+\_\+\+C\+L\+R\+\_\+\+T\+I\+M\+E@{S\+N54\+H\+C164\+\_\+\+C\+M\+D\+\_\+\+W\+A\+I\+T\+\_\+\+C\+L\+R\+\_\+\+T\+I\+M\+E}!S\+N54\+H\+C164.\+h@{S\+N54\+H\+C164.\+h}}
+\subsubsection[{S\+N54\+H\+C164\+\_\+\+C\+M\+D\+\_\+\+W\+A\+I\+T\+\_\+\+C\+L\+R\+\_\+\+T\+I\+M\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+N54\+H\+C164\+\_\+\+C\+M\+D\+\_\+\+W\+A\+I\+T\+\_\+\+C\+L\+R\+\_\+\+T\+I\+M\+E~30}}\label{_s_n54_h_c164_8h_affcc1fc171b3c770e2de25decf2935a5}
+Wait time in micro seconds. According to specification this is the minimal time the I\+C needs to recognize the clear signal. \hypertarget{_s_n54_h_c164_8h_aa84d3dd4dde38f540cb59f9ec8318674}{\index{S\+N54\+H\+C164.\+h@{S\+N54\+H\+C164.\+h}!S\+N54\+H\+C164\+\_\+\+C\+M\+D\+\_\+\+W\+A\+I\+T\+\_\+\+D\+A\+T\+A\+\_\+\+T\+I\+M\+E@{S\+N54\+H\+C164\+\_\+\+C\+M\+D\+\_\+\+W\+A\+I\+T\+\_\+\+D\+A\+T\+A\+\_\+\+T\+I\+M\+E}}
+\index{S\+N54\+H\+C164\+\_\+\+C\+M\+D\+\_\+\+W\+A\+I\+T\+\_\+\+D\+A\+T\+A\+\_\+\+T\+I\+M\+E@{S\+N54\+H\+C164\+\_\+\+C\+M\+D\+\_\+\+W\+A\+I\+T\+\_\+\+D\+A\+T\+A\+\_\+\+T\+I\+M\+E}!S\+N54\+H\+C164.\+h@{S\+N54\+H\+C164.\+h}}
+\subsubsection[{S\+N54\+H\+C164\+\_\+\+C\+M\+D\+\_\+\+W\+A\+I\+T\+\_\+\+D\+A\+T\+A\+\_\+\+T\+I\+M\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+N54\+H\+C164\+\_\+\+C\+M\+D\+\_\+\+W\+A\+I\+T\+\_\+\+D\+A\+T\+A\+\_\+\+T\+I\+M\+E~30}}\label{_s_n54_h_c164_8h_aa84d3dd4dde38f540cb59f9ec8318674}
+Wait time in micro seconds. According to specification this is the minimal time the I\+C needs to recognize data signal. \hypertarget{_s_n54_h_c164_8h_a22469686577e3f812413a6eefbce7eb5}{\index{S\+N54\+H\+C164.\+h@{S\+N54\+H\+C164.\+h}!S\+N54\+H\+C164\+\_\+\+H@{S\+N54\+H\+C164\+\_\+\+H}}
+\index{S\+N54\+H\+C164\+\_\+\+H@{S\+N54\+H\+C164\+\_\+\+H}!S\+N54\+H\+C164.\+h@{S\+N54\+H\+C164.\+h}}
+\subsubsection[{S\+N54\+H\+C164\+\_\+\+H}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+N54\+H\+C164\+\_\+\+H}}\label{_s_n54_h_c164_8h_a22469686577e3f812413a6eefbce7eb5}
+avoids double processing of this include 
+
+\subsection{Function Documentation}
+\hypertarget{_s_n54_h_c164_8h_a4dad589fa4a02f265916f6744c71a970}{\index{S\+N54\+H\+C164.\+h@{S\+N54\+H\+C164.\+h}!S\+N54\+H\+C164\+\_\+bit@{S\+N54\+H\+C164\+\_\+bit}}
+\index{S\+N54\+H\+C164\+\_\+bit@{S\+N54\+H\+C164\+\_\+bit}!S\+N54\+H\+C164.\+h@{S\+N54\+H\+C164.\+h}}
+\subsubsection[{S\+N54\+H\+C164\+\_\+bit}]{\setlength{\rightskip}{0pt plus 5cm}void S\+N54\+H\+C164\+\_\+bit (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t $\ast$}]{data\+\_\+port, }
+\item[{uint8\+\_\+t}]{data\+\_\+pin, }
+\item[{uint8\+\_\+t}]{clock\+\_\+pin, }
+\item[{bool}]{bit}
+\end{DoxyParamCaption}
+)}}\label{_s_n54_h_c164_8h_a4dad589fa4a02f265916f6744c71a970}
+
+
+Shift single bit into shift register. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em $\ast$data\+\_\+port} & $\ast$port is the reference -\/ an 8 bit address -\/ to the data port of the micro controller where the data port of the shift register is connected to. Please make sure to use an leading \& in case of handing over a macro definition like P\+O\+R\+T\+D. \\
+\hline
+\mbox{\tt in}  & {\em data\+\_\+pin} & the number of the microcontroller's pin of port handed over above (eg. P\+D3) where the data line of the shift register is connected to the micro controller. \\
+\hline
+\mbox{\tt in}  & {\em clock\+\_\+pin} & the number of the microcontroller's pin of port handed over above (eg. P\+D3) where the clock line of the shift register is connected to the micro controller. \\
+\hline
+\mbox{\tt in}  & {\em bit} & is an boolean set to either true or false. Whereby true represents 1 and false 0.\\
+\hline
+\end{DoxyParams}
+The function set the line given by combination of data\+\_\+port and data\+\_\+pin to value according to parameter bit (true or false -\/ whereby true = high and false = low). This level is held for the periode specified in macro S\+N54\+H\+C164\+\_\+\+C\+M\+D\+\_\+\+W\+A\+I\+T\+\_\+\+D\+A\+T\+A\+\_\+\+T\+I\+M\+E. Default value is set to minimum time according spec.
+
+After setting the data line the function  S\+N54\+H\+C164\+\_\+clock is called to instruct the shift register to take over the state given on data line.
+
+This function requires the include $<$util/delay.\+h$>$
+
+Usage\+: 
+\begin{DoxyCode}
+1 #include <avr/io.h>
+2 #include <util/delay.h>
+3 
+4 #define SHIFT\_REG\_DATA\_PORT PORTD
+5 #define SHIFT\_REG\_CLK\_PIN   PD3
+6 #define SHIFT\_REG\_DATA\_PIN  PD2
+7 #define SN54HC164\_CMD\_WAIT\_CLK\_TIME 25
+8 #define SN54HC164\_CMD\_WAIT\_DATA\_TIME 30
+9 ...
+10 SN54HC164\_bit(&SHIFT\_REG\_DATA\_PORT, SHIFT\_REG\_DATA\_PIN,SHIFT\_REG\_CLK\_PIN, true);
+11 ...
+\end{DoxyCode}
+ \hypertarget{_s_n54_h_c164_8h_a7aed975455db966f44726caadf705ac9}{\index{S\+N54\+H\+C164.\+h@{S\+N54\+H\+C164.\+h}!S\+N54\+H\+C164\+\_\+byte@{S\+N54\+H\+C164\+\_\+byte}}
+\index{S\+N54\+H\+C164\+\_\+byte@{S\+N54\+H\+C164\+\_\+byte}!S\+N54\+H\+C164.\+h@{S\+N54\+H\+C164.\+h}}
+\subsubsection[{S\+N54\+H\+C164\+\_\+byte}]{\setlength{\rightskip}{0pt plus 5cm}void S\+N54\+H\+C164\+\_\+byte (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t $\ast$}]{data\+\_\+port, }
+\item[{uint8\+\_\+t}]{data\+\_\+pin, }
+\item[{uint8\+\_\+t}]{clock\+\_\+pin, }
+\item[{uint8\+\_\+t}]{databyte}
+\end{DoxyParamCaption}
+)}}\label{_s_n54_h_c164_8h_a7aed975455db966f44726caadf705ac9}
+
+
+Shift whole byte into shift register. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em $\ast$data\+\_\+port} & $\ast$port is the reference -\/ an 8 bit address -\/ to the data port of the micro controller where the data port of the shift register is connected to. Please make sure to use an leading \& in case of handing over a macro definition like P\+O\+R\+T\+D. \\
+\hline
+\mbox{\tt in}  & {\em data\+\_\+pin} & the number of the microcontroller's pin of port handed over above (eg. P\+D3) where the data line of the shift register is connected to the micro controller. \\
+\hline
+\mbox{\tt in}  & {\em clock\+\_\+pin} & the number of the microcontroller's pin of port handed over above (eg. P\+D3) where the clock line of the shift register is connected to the micro controller. \\
+\hline
+\mbox{\tt in}  & {\em databyte} & a byte of data which will be shifted into the register.\\
+\hline
+\end{DoxyParams}
+The function set the line given by combination of data\+\_\+port and data\+\_\+pin to value according to parameter databyte. Therfore the function S\+N54\+H\+C164\+\_\+bit is called for each bit of databyte.
+
+This function requires the include $<$util/delay.\+h$>$
+
+Usage\+: 
+\begin{DoxyCode}
+1 #include <avr/io.h>
+2 #include <util/delay.h>
+3 
+4 #define SHIFT\_REG\_DATA\_PORT PORTD
+5 #define SHIFT\_REG\_CLK\_PIN   PD3
+6 #define SHIFT\_REG\_DATA\_PIN  PD2
+7 #define SN54HC164\_CMD\_WAIT\_CLK\_TIME 25
+8 #define SN54HC164\_CMD\_WAIT\_DATA\_TIME 30
+9 ...
+10 SN54HC164\_byte(&SHIFT\_REG\_DATA\_PORT, SHIFT\_REG\_DATA\_PIN, SHIFT\_REG\_CLK\_PIN, 0b10101010);
+11 ...
+\end{DoxyCode}
+ \hypertarget{_s_n54_h_c164_8h_af3227d0693902aaba97515b8f43de590}{\index{S\+N54\+H\+C164.\+h@{S\+N54\+H\+C164.\+h}!S\+N54\+H\+C164\+\_\+clock@{S\+N54\+H\+C164\+\_\+clock}}
+\index{S\+N54\+H\+C164\+\_\+clock@{S\+N54\+H\+C164\+\_\+clock}!S\+N54\+H\+C164.\+h@{S\+N54\+H\+C164.\+h}}
+\subsubsection[{S\+N54\+H\+C164\+\_\+clock}]{\setlength{\rightskip}{0pt plus 5cm}void S\+N54\+H\+C164\+\_\+clock (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t $\ast$}]{data\+\_\+port, }
+\item[{uint8\+\_\+t}]{clock\+\_\+pin}
+\end{DoxyParamCaption}
+)}}\label{_s_n54_h_c164_8h_af3227d0693902aaba97515b8f43de590}
+
+
+Send clock Pulse to shift register. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em $\ast$data\+\_\+port} & $\ast$port is the reference -\/ an 8 bit address -\/ to the data port of the micro controller where the data port of the shift register is connected to. Please make sure to use an leading \& in case of handing over a macro definition like P\+O\+R\+T\+D. \\
+\hline
+\mbox{\tt in}  & {\em clock\+\_\+pin} & the number of the microcontroller's pin of port handed over above (eg. P\+D4) where the clock line of the shift register is connected to the micro controller.\\
+\hline
+\end{DoxyParams}
+The function set the line given by combination of data\+\_\+port and clock\+\_\+pin to high. This level is held for the periode specified in macro S\+N54\+H\+C164\+\_\+\+C\+M\+D\+\_\+\+W\+A\+I\+T\+\_\+\+C\+L\+K\+\_\+\+T\+I\+M\+E. Default value is set to minimum time according spec.
+
+This function requires the include $<$util/delay.\+h$>$
+
+Usage\+: 
+\begin{DoxyCode}
+1 #include <avr/io.h>
+2 #include <util/delay.h>
+3 
+4 #define SHIFT\_REG\_DATA\_PORT PORTD
+5 #define SHIFT\_REG\_CLK\_PIN   PD4
+6 #define SN54HC164\_CMD\_WAIT\_CLK\_TIME 25
+7 ...
+8 SN54HC164\_clock(&SHIFT\_REG\_DATA\_PORT, SHIFT\_REG\_CLK\_PIN);
+9 ...
+\end{DoxyCode}
+ \hypertarget{_s_n54_h_c164_8h_a3aa48ed905fd1aac09f3ca65286c354c}{\index{S\+N54\+H\+C164.\+h@{S\+N54\+H\+C164.\+h}!S\+N54\+H\+C164\+\_\+erase@{S\+N54\+H\+C164\+\_\+erase}}
+\index{S\+N54\+H\+C164\+\_\+erase@{S\+N54\+H\+C164\+\_\+erase}!S\+N54\+H\+C164.\+h@{S\+N54\+H\+C164.\+h}}
+\subsubsection[{S\+N54\+H\+C164\+\_\+erase}]{\setlength{\rightskip}{0pt plus 5cm}void S\+N54\+H\+C164\+\_\+erase (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t $\ast$}]{port, }
+\item[{uint8\+\_\+t}]{pin}
+\end{DoxyParamCaption}
+)}}\label{_s_n54_h_c164_8h_a3aa48ed905fd1aac09f3ca65286c354c}
+
+
+Erase content of shift register. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em $\ast$port} & is the reference -\/ an 8 bit address -\/ to the data port of the micro controller where the data port of the shift register is connected to. Please make sure to use an leading \& in case of handing over a macro definition like P\+O\+R\+T\+D.\\
+\hline
+\mbox{\tt in}  & {\em pin} & the number of the microcontroller's pin of port handed over above (eg. P\+D4) where the erase line of the shift register is connected to the micro controller.\\
+\hline
+\end{DoxyParams}
+The function set the C\+L\+R line to low for the periode specified in S\+N54\+H\+C164\+\_\+\+C\+M\+D\+\_\+\+W\+A\+I\+T\+\_\+\+C\+L\+R\+\_\+\+T\+I\+M\+E. By doing this the content of the shift register is set to zeros.
+
+This function requires the include $<$util/delay.\+h$>$
+
+Usage\+: 
+\begin{DoxyCode}
+1 #include <avr/io.h>
+2 #include <util/delay.h>
+3 
+4 #define SHIFT\_REG\_DATA\_PORT PORTD
+5 #define SHIFT\_REG\_CLR\_PIN   PD3
+6 #define SN54HC164\_CMD\_WAIT\_CLR\_TIME 30
+7 ...
+8 SN54HC164\_erase(&SHIFT\_REG\_DATA\_PORT, SHIFT\_REG\_CLR\_PIN);
+9 ...
+\end{DoxyCode}
+ 

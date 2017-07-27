@@ -2,6 +2,16 @@
 /** SN54HC164.c                   **/
 /***********************************/
 
+/**
+  @file SN54HC164.c
+  @author Woifale
+  @date 26 July 2017
+  @brief Functions for Shift Register SN54HC164
+ 
+  This file contains functions to work with Shift Register SN54HC164.
+  SN54HC164 is a serial 8bit Shift register which immediately writes out data
+ */
+
 #include "SN54HC164.h"
 
 
